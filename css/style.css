@@ -10,6 +10,7 @@ body {
   text-decoration: none;
   list-style: none;
 }
+/* TODO ESTO PERTENECE AL HEADER */
 .header{
   background-image: url("../img/StreetFighter.gif");
   width: 100%;
@@ -26,6 +27,7 @@ body {
   -1px  1px 0 rgb(0, 0, 0),
    1px  1px 0 rgb(0, 0, 0),
    1px -1px 0 rgb(0, 0, 0);
+   
   /* Tamano y estilo de la letra */
   font-size: 1.5rem;
   font-family: "Bungee Spice", sans-serif;
@@ -33,8 +35,48 @@ body {
   font-style: normal;
 }
 
-img{
-  max-width: 100%; 
+
+/* TODO ESTO ES EL CARRUSEL AUTOMATICAMENTE  */
+.slider-box{
+  width: 1200px;
+  height: auto;
+  margin: 50px auto 0;
+  overflow: hidden;
+}
+.slider-box ul{
+  display: flex;
+  padding: 0;
+  width: 600%;
+  animation: slide 15s  infinite alternate ease-in-out;
+}
+.slider-box li{
+  width: 100%;
+  list-style: none;
+  position: relative;
+}
+.slider-box img {
+  max-width: 50%; /* Ajusta el tamaño máximo de las imágenes */
+  height: auto;   /* Mantiene la proporción de las imágenes */
+
+}
+@keyframes slide {
+  0%   { margin-left: 0; }          /* Primera imagen */
+  16.67%  { margin-left: 0; }       /* Mantener la primera imagen */
+
+  16.68%  { margin-left: -100%; }   /* Segunda imagen */
+  33.34%  { margin-left: -100%; }   /* Mantener la segunda imagen */
+
+  33.35%  { margin-left: -200%; }   /* Tercera imagen */
+  50.01%  { margin-left: -200%; }   /* Mantener la tercera imagen */
+
+  50.02%  { margin-left: -300%; }   /* Cuarta imagen */
+  66.68%  { margin-left: -300%; }   /* Mantener la cuarta imagen */
+
+  66.69%  { margin-left: -400%; }   /* Quinta imagen */
+  83.35%  { margin-left: -400%; }   /* Mantener la quinta imagen */
+
+  83.36%  { margin-left: -500%; }   /* Sexta imagen */
+  100% { margin-left: -500%; }      /* Mantener la sexta imagen */
 }
 
 .container{
@@ -89,9 +131,6 @@ text-transform: uppercase;
   display: none;
 }
 
-/* .header-content{
-  display: flex;
-} */
 
 .header-txt{
   flex-basis: 50%;
@@ -166,6 +205,179 @@ h2 {
 h3 {
   font-size: 20px;
   color: #FFFFFF;
+  margin-bottom: 20px;
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price p {
+  font-size: 17px;
+  color: #FF5A2C;
+}
+
+.btn-2 {
+  padding: 5px 25px;
+  background-color: #FF5A2C;
+  margin-right: 0;
+}
+
+.contact {
+  padding: 150px 300px;
+}
+
+.contact-content {
+  background-color: #2A223A;
+  text-align: center;
+  padding: 50px;
+  border-radius: 50px;
+}
+
+form{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+input {
+  padding: 18px 25px;
+  background-color: #3F3456;
+  border: 0;
+  border-radius: 25px;
+  outline: none;
+  margin-right: 10px;
+  color: #FFFFFF;
+  font-size: 17px;
+}
+
+::placeholder {
+  color: #E0E0E0;
+  font-size: 17px;
+}
+
+.btn-3 {
+  background-color: #FF5A2C;
+  cursor: pointer;
+  margin-right: 0;
+}
+/* Es para el footer */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 0;
+}
+/* Es para los enlaces */
+.link ul {
+  display: flex;
+}
+/* Es para darle color a los botones */
+.link ul li > a {
+  font-size: 17px;
+  color: #FFFFFF;
+  margin-right: 20px;
+
+}
+/* Es para darle color cuando tienes el cursor encima del boton */
+.link ul li > a:hover{
+  color: #FF5A2C;
+}
+
+/* Media Query */
+@media(max-width:991px) {
+  .menu {
+    padding: 20px;
+  }
+  
+  .menu-label {
+    display: initial;
+  }
+
+  .menu .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #FF5A2C;
+    display: none;
+  }
+  
+  .menu .navbar ul li a:hover {
+    color: #181726;
+  }
+
+  .menu .navbar ul li {
+    width: 100%;
+  }
+
+  #menu:checked ~ .navbar {
+    display: initial;
+  }
+
+  .header {
+    min-height: 0vh;
+    padding: 80px 30px 50px 30px;
+  }
+
+  .header-txt {
+    text-align: center;
+    flex-basis: 100%;
+  }
+
+  .header-txt h1 {
+    font-size: 50px;
+    margin-bottom: 15px;
+  }
+
+  .butons {
+    justify-content: center;
+  }
+
+  .btn-1:last-of-type{
+    margin-right: 0;
+  }
+
+  .popular {
+    display: none;
+  }
+
+  .product {
+    padding: 30px;
+  }
+
+  .product-content {
+    grid-template-columns: repeat(1,1fr);
+    gap: 30px;
+  }
+
+  .product-1 img {
+    width: 100%;
+  }
+
+  .contact {
+    padding: 30px;
+  }
+
+  form {
+    flex-direction: column;
+  }
+
+  input {
+    margin: 0 0 20px 0;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .link ul {
+    margin-top: 20px;
+  }
+
 }
 
 /* Letra de la pagina
