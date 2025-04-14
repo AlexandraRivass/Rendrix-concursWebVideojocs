@@ -55,7 +55,7 @@ body {
   position: relative;
 }
 .slider-box img {
-  max-width: 50%; /* Ajusta el tamaño máximo de las imágenes */
+  max-width: 45%; /* Ajusta el tamaño máximo de las imágenes */
   height: auto;   /* Mantiene la proporción de las imágenes */
 
 }
@@ -288,6 +288,23 @@ input {
 
 /* Media Query */
 @media(max-width:991px) {
+
+  /* CARRUSEL AUTOMATICO */
+  .slider-box {
+    width: 100%; /* Ajusta el ancho del carrusel al 100% del contenedor */
+    margin: 20px auto; /* Ajusta el margen para dispositivos móviles */
+    overflow: hidden; /* Asegúrate de que el contenido no se desborde */
+  }
+
+  .slider-box img {
+    max-width: 100%; /* Asegúrate de que las imágenes ocupen todo el ancho disponible */
+    height: auto; /* Mantén la proporción de las imágenes */
+  }
+
+  .slider-box ul {
+    width: 600%; /* Mantén el ancho total para todas las imágenes */
+    animation: slide 18s infinite alternate ease-in-out; /* Ajusta la duración si es necesario */
+  }
   .menu {
     padding: 20px;
   }
@@ -341,7 +358,7 @@ input {
   }
 
   .popular {
-    display: none;
+  
   }
 
   .product {
