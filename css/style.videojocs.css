@@ -1,0 +1,95 @@
+*{
+    margin: 0 ;
+    padding: 0 ;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* ESTO ES PARA LAS PAGINAS DE LOS JUEGOS */
+video {
+    width: 100%;
+    height: auto; /* Mantiene la proporción del video */
+    /* Elimina las siguientes propiedades para que el video no esté fijo */
+  }
+  
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-size: 100em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-size: 48px;
+    font-family: "Anton", sans-serif;
+}
+
+.color6{
+    color: #FF5A2C;
+}
+
+.letrapequeña{
+    font-size: 0.5em;
+    vertical-align: super; 
+    color: white;
+}
+
+.contenedor{
+    width: 100%;
+    display: flex;
+
+    height: 100vh;
+}
+/* EL RECUADRO */
+.contenedor figure{
+    position: relative;
+    height: 250px;
+    width: 350px;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.50);
+}
+.contenedor figure img{
+    width: 100%;
+    height: 100%;
+    transition: all 500ms ease-in-out;
+}
+.contenedor figure .capa{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(11,183,123,0.6);
+    transition: all 500ms ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+}
+.contenedor figure:hover > .capa{
+    opacity: 1;
+    visibility: visible;
+}
+.contenedor figure:hover > .capa h3{
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.contenedor figure:hover > img{
+    transform: scale(1.3);
+}
+.contenedor figure .capa h3{
+    color: #fff;
+    font-weight: 400;
+    margin-bottom: 120px;
+    transition: all 500ms ease-in-out;
+    margin-top: 30px;
+}
+.contenedor figure .capa p{
+    color: #fff;
+    font-size: 15px;
+    line-height: 1.5;
+    width: 100%;
+    max-width: 220px;
+    margin: auto;
+}

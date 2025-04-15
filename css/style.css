@@ -149,10 +149,6 @@ text-transform: uppercase;
   margin-bottom: 45px;
 }
 
-/* .butons{
-  display: flex;
-} */
-
 .btn-1, .btn-2, .btn-3 {
   display: inline-block;
   padding: 11px 35px;
@@ -289,7 +285,7 @@ input {
 /* Media Query */
 @media(max-width:991px) {
 
-  /* CARRUSEL AUTOMATICO */
+/* CARRUSEL AUTOMATICO */
   .slider-box {
     width: 100%; /* Ajusta el ancho del carrusel al 100% del contenedor */
     margin: 20px auto; /* Ajusta el margen para dispositivos móviles */
@@ -305,39 +301,52 @@ input {
     width: 600%; /* Mantén el ancho total para todas las imágenes */
     animation: slide 18s infinite alternate ease-in-out; /* Ajusta la duración si es necesario */
   }
+
+
+
+    /* ESTO ES PARTE DEL HEADER CUYO BOTON, SE VA DESPLEGAR OPCIONES*/
   .menu {
-    padding: 20px;
+    padding: 30px; /* Espacio interior  alrededor del contenido del menú */
   }
-  
-  .menu-label {
+
+  /*ESTILO PARA ETIQUETAS DENTRO DEL MENÚ */
+  .menu label {
+    display: initial; /* Usa el valor por defecto del navegador para mostrar el label */
+  }
+
+  /* CLASE PARA ELEMENTO DE RETROCESO O SEPARACIÓN */
+  .back {
+    padding: 40px 0; /* Espaciado vertical (arriba y abajo), 0 a los lados */
+  }
+
+  /* MENÚ DE NAVEGACIÓN DESPLEGABLE */
+  .menu .navbar {
+    position: absolute;       /* Se posiciona respecto al contenedor padre más cercano */
+    top: 100%;                /* Se coloca justo debajo del menú principal */
+    left: 0;                  /* Se alinea a la izquierda del contenedor */
+    right: 0;                 /* Se estira hasta el borde derecho */
+    background-color: #e08b61;
+    display: none;            /* Oculto por defecto */
+  }
+
+  /* LOS ELEMENTOS DE LA LISTA DE NAVEGACIÓN */
+  .menu .navbar ul li {
+    width: 100%; /* Cada ítem ocupa todo el ancho del menú */
+  }
+  menu:checked ~ .navbar {
     display: initial;
   }
 
-  .menu .navbar {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background-color: #FF5A2C;
-    display: none;
+  /* COLOR DE LA LINEA DE ABAJO DEL TEXTO */
+  .menu .navbar ul li a:hover {
+    color: #ff5500;
   }
   
-  .menu .navbar ul li a:hover {
-    color: #181726;
-  }
-
-  .menu .navbar ul li {
-    width: 100%;
-  }
-
   #menu:checked ~ .navbar {
     display: initial;
   }
 
-  .header {
-    min-height: 0vh;
-    padding: 80px 30px 50px 30px;
-  }
+
 
   .header-txt {
     text-align: center;
@@ -357,10 +366,7 @@ input {
     margin-right: 0;
   }
 
-  .popular {
   
-  }
-
   .product {
     padding: 30px;
   }
@@ -396,7 +402,6 @@ input {
   }
 
 }
-
 /* Letra de la pagina
 .silkscreen-regular {
   font-family: "Silkscreen", sans-serif;
@@ -405,4 +410,6 @@ input {
 }
 */
 
+
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet')
+
