@@ -1,9 +1,13 @@
-*{
-    margin: 0 ;
-    padding: 0 ;
+    *{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    list-style: none;
+}
+
+body{
+    background-color: rgb(101, 94, 94);
+    color: white;
 }
 
 /* ESTO ES PARA LAS PAGINAS DE LOS JUEGOS */
@@ -13,17 +17,15 @@ video {
     /* Elimina las siguientes propiedades para que el video no esté fijo */
   }
   
-.overlay-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    text-align: center;
-    font-size: 100em;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    font-size: 48px;
-    font-family: "Anton", sans-serif;
+.overlay-text h1 {
+    font-size: 5rem; /* Ajusta el tamaño de fuente según tus necesidades */
+    font-family: "Anton", sans-serif;    
+    color: white; /* Asegúrate de que el color del texto sea visible sobre el video */
+    text-align: center; /* Centra el texto si es necesario */
+    position: absolute; 
+    top: 50%; /* Ajusta la posición vertical */
+    left: 50%; /* Ajusta la posición horizontal */
+    transform: translate(-50%, -50%); /* Centra el texto */
 }
 
 .color6{
@@ -35,12 +37,13 @@ video {
     vertical-align: super; 
     color: white;
 }
+.pequeñaletra{
+    font-size: 1.3rem;
+}
 
 .contenedor{
     width: 100%;
-    display: flex;
-
-    height: 100vh;
+    display: flex;    
 }
 /* EL RECUADRO */
 .contenedor figure{
@@ -50,6 +53,7 @@ video {
     overflow: hidden;
     border-radius: 6px;
     box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.50);
+
 }
 .contenedor figure img{
     width: 100%;
@@ -81,7 +85,7 @@ video {
 .contenedor figure .capa h3{
     color: #fff;
     font-weight: 400;
-    margin-bottom: 120px;
+    margin-bottom: 0;
     transition: all 500ms ease-in-out;
     margin-top: 30px;
 }
@@ -93,3 +97,110 @@ video {
     max-width: 220px;
     margin: auto;
 }
+
+/* LISTA PERO EN CUADRADO */
+ul {
+    list-style-type: square; /* Cambia el bullet a cuadrado */
+    padding-left: 20px; /* Añade un poco de espacio a la izquierda para que los puntos sean visibles */
+}
+
+.fuentetitulo{
+    font-family: 'Black Ops One', sans-serif;
+    font-size: 35px;
+}
+
+/* TODO ESTO ES EL ACCORDION */
+.accordion-item {
+    background-color: transparent; /* Fondo transparente */
+    border: 1px solid white;       /* Borde blanco alrededor del bloque */
+    color: white;          
+  }
+  
+  /* Botón del encabezado del acordeón (cuando está cerrado) */
+  .accordion-button {
+    background-color: transparent; /* Fondo transparente en el botón */
+    color: white;                 
+    border-bottom: 1px solid white; /* Línea blanca debajo del botón */
+  }
+  
+  /* Remueve el contorno azul predeterminado al hacer foco en el botón */
+  .accordion-button:focus {
+    box-shadow: none; /* Sin sombra al hacer clic */
+  }
+  
+  /* Botón del acordeón cuando está expandido (abierto) */
+  .accordion-button:not(.collapsed) {
+    background-color: rgba(255, 255, 255, 0.05); /* Fondo transparente */
+    color: white; 
+  }
+  
+  /* Contenido del acordeón  */
+  .accordion-body {
+    background-color: transparent; /* Sin fondo */
+    color: white; 
+  }
+  
+  /* Lista de requisito */
+  .requisitos {
+    list-style-type: square; /* Viñetas cuadradas */
+    padding-left: 20px;      /* Espaciado interno a la izquierda */
+    color: white;
+  }
+  
+  /* Para resaltar el texto dentro de <strong> en la lista */
+  .requisitos strong {
+    color: #a3f892; /* Dorado para los subtítulos (puedes cambiarlo) */
+  }
+
+  /* TABLA DE CALLOFDUTY */
+  /* Contenedor de la tabla */
+.comparativa-ediciones {
+    max-width: 100%;
+    overflow-x: auto;
+    padding: 1rem;
+  }
+  
+  /* Encabezado de la tabla */
+  .comparativa-ediciones thead th {
+    background-color: #1a1a1a; /* Fondo más oscuro para la cabecera */
+    padding: 1rem;
+    text-align: left;
+    border: 1px solid #333;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+  }
+  
+  /* Filas del cuerpo alternando colores */
+  .comparativa-ediciones tbody tr:nth-child(even) {
+    background-color: #00000050; /* Filas pares más oscuras */
+  }
+  
+
+  
+  /* Celdas del cuerpo */
+  .comparativa-ediciones td {
+    padding: 0.75rem;
+    text-align: center;
+    border: 1px solid #222;
+  }
+  
+  /* Primera columna alineada a la izquierda */
+  .comparativa-ediciones td:first-child {
+    text-align: left;
+  }
+  .comparativa-ediciones table {
+    width: 100%;
+    border-collapse: collapse;
+    background-image: url('../img/CallofDuty/fondo.jpg'); /* ← Aquí va tu imagen */
+    background-size: cover;      /* Ajusta la imagen al tamaño de la tabla */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat;
+    color: white;                /* Asegura que el texto sea visible */
+  }  
+  
+  /* Responsive para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .comparativa-ediciones table {
+      font-size: 0.85rem;
+    }
+  }
