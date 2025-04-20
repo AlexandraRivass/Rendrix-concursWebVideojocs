@@ -213,7 +213,7 @@ h3 {
 
 .price p {
   font-size: 17px;
-  color: #FF5A2C;
+  color: #ff3700;
 }
 
 .btn-2 {
@@ -226,19 +226,22 @@ h3 {
   padding: 150px 300px;
 }
 
+/* FONDO DE LOS DOS BOTONES */
 .contact-content {
   background-color: #2A223A;
   text-align: center;
   padding: 50px;
   border-radius: 50px;
 }
-
+ 
+/* PARTE DEL CORREO Y EL BOTON JUNTOS */
 form{
   display: flex;
   justify-content: center;
   margin-top: 20px;
 }
 
+/* ESTO ES EL BOTON PARA EL CORREO */
 input {
   padding: 18px 25px;
   background-color: #3F3456;
@@ -250,16 +253,14 @@ input {
   font-size: 17px;
 }
 
-::placeholder {
-  color: #E0E0E0;
-  font-size: 17px;
-}
 
 .btn-3 {
   background-color: #FF5A2C;
   cursor: pointer;
   margin-right: 0;
 }
+
+
 /* Es para el footer */
 .footer {
   display: flex;
@@ -283,6 +284,56 @@ input {
   color: #FF5A2C;
 }
 
+
+/* ANIMACIÓN AL HACER HOVER */
+
+.carrusel {
+  border: 5px solid transparent;
+  transition: border-color 0.5s ease-in-out;
+}
+
+.carrusel:hover {
+  border-color: #ff5733;
+  animation: borderAnimation 2s infinite;
+}
+
+@keyframes borderAnimation {
+  0% {
+      border-color: #00ffffaa;
+  }
+  50% {
+      border-color: #ffffff;
+  }
+  100% {
+      border-color: #00ffffaa;
+  }
+}
+
+.product-1:hover{
+  border: 2px solid #fff;
+  box-shadow: 0 0 15px #00ffffaa; /* Brillo cian */
+}
+
+/* Imagen dentro del producto */
+.product-1 img {
+  width: 100%;
+  display: block;
+  border-bottom: 1px solid #333;
+}
+
+.btn-2 {
+  background: #0ff;
+  color: #000;
+  padding: 0.3rem 0.6rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: background 0.3s ease;
+}
+
+
+
+
 /* Media Query */
 @media(max-width:991px) {
 
@@ -305,7 +356,7 @@ input {
 
 
 
-    /* ESTO ES PARTE DEL HEADER CUYO BOTON, SE VA DESPLEGAR OPCIONES*/
+  /* ESTO ES PARTE DEL HEADER CUYO BOTON, SE VA DESPLEGAR OPCIONES*/
   .menu {
     padding: 30px; /* Espacio interior  alrededor del contenido del menú */
   }

@@ -8,13 +8,14 @@
 body{
     background-color: rgb(101, 94, 94);
     color: white;
+    font-family: 'Oxanium', sans-serif;
+    font-size: 18px;
 }
 
 /* ESTO ES PARA LAS PAGINAS DE LOS JUEGOS */
 video {
     width: 100%;
     height: auto; /* Mantiene la proporción del video */
-    /* Elimina las siguientes propiedades para que el video no esté fijo */
   }
   
 .overlay-text h1 {
@@ -152,6 +153,7 @@ ul {
     color: #a3f892; /* Dorado para los subtítulos (puedes cambiarlo) */
   }
 
+
   /* TABLA DE CALLOFDUTY */
   /* Contenedor de la tabla */
 .comparativa-ediciones {
@@ -191,14 +193,14 @@ ul {
   .comparativa-ediciones table {
     width: 100%;
     border-collapse: collapse;
-    background-image: url('../img/CallofDuty/fondo.jpg'); /* ← Aquí va tu imagen */
+    background-image: url('../img/CallofDuty/fondo.jpg'); 
     background-size: cover;      /* Ajusta la imagen al tamaño de la tabla */
     background-position: center; /* Centra la imagen */
     background-repeat: no-repeat;
     color: white;                /* Asegura que el texto sea visible */
   }  
   
-  /* Responsive para pantallas pequeñas */
+
   @media (max-width: 768px) {
     .comparativa-ediciones table {
       font-size: 0.85rem;
