@@ -1,4 +1,4 @@
-    *{
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -17,7 +17,8 @@ video {
     width: 100%;
     height: auto; /* Mantiene la proporción del video */
   }
-  
+
+  /* FUENTE DE TITULO DE CALL OF DUTY */
 .overlay-text h1 {
     font-size: 5rem; /* Ajusta el tamaño de fuente según tus necesidades */
     font-family: "Anton", sans-serif;    
@@ -29,6 +30,28 @@ video {
     transform: translate(-50%, -50%); /* Centra el texto */
 }
 
+/* FUENTE DE TITULO DE COUNTERSTRIKE */
+.overlay-text1 h1 {
+  font-size: 5rem; /* Ajusta el tamaño de fuente según tus necesidades */
+  font-family: 'Bruno Ace', sans-serif;
+  color: rgb(161, 0, 0); /* Asegúrate de que el color del texto sea visible sobre el video */
+  text-align: center; /* Centra el texto si es necesario */
+  position: absolute; 
+  top: 50%; /* Ajusta la posición vertical */
+  left: 42%; /* Ajusta la posición horizontal */
+  transform: translate(-50%, -50%); /* Centra el texto */
+}
+
+/* ESTO CONTIENE LA IMAGEN DEL TITULO */
+.counter-strike-title {
+  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+  text-align: center;  /* Centra el texto en la página */
+}
+
+.counter-icon {
+  vertical-align: middle;  /* Alinea la imagen con el texto */
+  display: inline-block;  /* Hace que la imagen se comporte como un elemento en línea */
+}
 .color6{
     color: #FF5A2C;
 }
@@ -76,14 +99,14 @@ video {
     opacity: 1;
     visibility: visible;
 }
-.contenedor figure:hover > .capa h3{
+.contenedor figure:hover > .capa h4{
     margin-top: 10px;
     margin-bottom: 15px;
 }
 .contenedor figure:hover > img{
     transform: scale(1.3);
 }
-.contenedor figure .capa h3{
+.contenedor figure .capa h4{
     color: #fff;
     font-weight: 400;
     margin-bottom: 0;
@@ -105,6 +128,7 @@ ul {
     padding-left: 20px; /* Añade un poco de espacio a la izquierda para que los puntos sean visibles */
 }
 
+/* ESTO SON LOS SUBTITULOS DE CADA PAGINA */
 .fuentetitulo{
     font-family: 'Black Ops One', sans-serif;
     font-size: 35px;
@@ -154,16 +178,25 @@ ul {
   }
 
 
-  /* TABLA DE CALLOFDUTY */
+  /* TABLAS FINALES*/
+
+  /* .comparativa-ediciones ESTO ES DEL CALLOFDUTY
+  .comparativa-ediciones1 ESTO ES DEL COUNTERSTRIKE
+  .comparativa-ediciones2 ESTO ES DEL GTAV
+  .comparitiva-ediciones3 ESTO ES DEL UNCHARTED
+  .comparitiva-ediciones4 ESTO ES DEL STREETFIGHTER
+  .comparitiva-ediciones5 ESTO ES DEL MORTALKOMBAT*/
+
   /* Contenedor de la tabla */
-.comparativa-ediciones {
+.comparativa-ediciones, .comparativa-ediciones1,.comparativa-ediciones2, .comparativa-ediciones3, .comparativa-ediciones4, .comparativa-ediciones5 {
     max-width: 100%;
     overflow-x: auto;
     padding: 1rem;
   }
   
   /* Encabezado de la tabla */
-  .comparativa-ediciones thead th {
+  .comparativa-ediciones thead th, .comparativa-ediciones1 thead th,.comparativa-ediciones2 thead th, .comparativa-ediciones3 thead th, 
+  .comparativa-ediciones4 thead th, .comparativa-ediciones5 thead th {
     background-color: #1a1a1a; /* Fondo más oscuro para la cabecera */
     padding: 1rem;
     text-align: left;
@@ -173,33 +206,88 @@ ul {
   }
   
   /* Filas del cuerpo alternando colores */
-  .comparativa-ediciones tbody tr:nth-child(even) {
-    background-color: #00000050; /* Filas pares más oscuras */
+  .comparativa-ediciones tbody tr:nth-child(even), .comparativa-ediciones1 tbody tr:nth-child(even),.comparativa-ediciones2 tbody tr:nth-child(even), 
+  .comparativa-ediciones3 tbody tr:nth-child(even), .comparativa-ediciones4 tbody tr:nth-child(even), .comparativa-ediciones5 tbody tr:nth-child(even) {
+    background-color: #00000080; /* Filas pares más oscuras */
   }
   
-
-  
   /* Celdas del cuerpo */
-  .comparativa-ediciones td {
+  .comparativa-ediciones td, .comparativa-ediciones1 td,.comparativa-ediciones2 td, .comparativa-ediciones3 td,
+  .comparativa-ediciones4 td, .comparativa-ediciones5 td {
     padding: 0.75rem;
     text-align: center;
     border: 1px solid #222;
   }
   
   /* Primera columna alineada a la izquierda */
-  .comparativa-ediciones td:first-child {
+  .comparativa-ediciones td:first-child, .comparativa-ediciones1 td:first-child,.comparativa-ediciones2 td:first-child, .comparativa-ediciones3 td:first-child,
+  .comparativa-ediciones4 td:first-child, .comparativa-ediciones5 td:first-child {
     text-align: left;
   }
   .comparativa-ediciones table {
     width: 100%;
     border-collapse: collapse;
-    background-image: url('../img/CallofDuty/fondo.jpg'); 
+    background-image: url('../img/CallofDuty/fondo.png'); 
     background-size: cover;      /* Ajusta la imagen al tamaño de la tabla */
     background-position: center; /* Centra la imagen */
     background-repeat: no-repeat;
-    color: white;                /* Asegura que el texto sea visible */
+    font-size: 18px; 
+    font-weight: bold; /*ESTA EN NEGRITA */
   }  
   
+  .comparativa-ediciones1 table {
+    width: 100%;
+    border-collapse: collapse;
+    background-image: url('../img/Counterstrike/fondo.jpg'); 
+    background-size: cover;      /* Ajusta la imagen al tamaño de la tabla */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat;
+    font-size: 18px; 
+    font-weight: bold; /*ESTA EN NEGRITA */
+  }
+
+  .comparativa-ediciones2 table {
+    width: 100%;
+    border-collapse: collapse;
+    background-image: url('../img/GTAV/fondo.png'); 
+    background-size: cover;      /* Ajusta la imagen al tamaño de la tabla */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat;
+    font-size: 18px; 
+    font-weight: bold; /*ESTA EN NEGRITA */
+  }  
+  
+  .comparativa-ediciones3 table {
+    width: 100%;
+    border-collapse: collapse;
+    background-image: url('../img/Uncharted4/fondo.png'); 
+    background-size: cover;      /* Ajusta la imagen al tamaño de la tabla */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat;
+    font-size: 18px; 
+    font-weight: bold; /*ESTA EN NEGRITA */
+  }
+
+  .comparativa-ediciones4 table {
+    width: 100%;
+    border-collapse: collapse;
+    background-image: url('../img/Streetfighter/fondo.jpg'); 
+    background-size: cover;      /* Ajusta la imagen al tamaño de la tabla */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat;
+    font-size: 18px; 
+    font-weight: bold; /*ESTA EN NEGRITA */
+  }  
+  .comparativa-ediciones5 table {
+    width: 100%;
+    border-collapse: collapse;
+    background-image: url('../img/MortalKombat/fondo.png'); 
+    background-size: cover;      /* Ajusta la imagen al tamaño de la tabla */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat;
+    font-size: 18px; 
+    font-weight: bold; /*ESTA EN NEGRITA */
+  }
 
   @media (max-width: 768px) {
     .comparativa-ediciones table {
