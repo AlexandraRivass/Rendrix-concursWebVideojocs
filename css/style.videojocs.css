@@ -18,51 +18,82 @@ video {
     height: auto; /* Mantiene la proporción del video */
   }
 
+/* BOTON DE COMPRA */
+/* PRIMER BOTON */
+.fondocolor{
+  background: rgba(11,183,123,0.6);
+  border-radius: 5px;
+  width: 90%;
+  margin-bottom: 2%;
+  border: 3px solid #366c1e;
+}
+/* SEGUNDO BOTON  */
+.fondocolor2{
+  background: rgba(255, 0, 0, 0.6);
+  border-radius: 5px;
+  width: 90%;
+  border: 3px solid #651c1c;
+}
+
+/* TERCER BOTON */
+.fondocolor3{
+  background-color: #F7C948;
+  border-radius: 5px;
+  width: 90%;
+  margin-top: 3%;
+  border: 3px solid #9d4e15;
+
+}
+
+/* CONTENIDO DEL BOTON */
+.fondocolor1{
+  background-color: #fff;
+  margin-left: 5%;
+  border-radius: 5px;
+  width: 80%;
+  margin-bottom: 5%;
+}
+
+.textonegro{
+  text-align: center;
+  color: #1a1a1a;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+.sin-linea{
+  text-decoration: none;
+}
   /* FUENTE DE TITULO DE CALL OF DUTY */
 .overlay-text h1 {
     font-size: 5rem; /* Ajusta el tamaño de fuente según tus necesidades */
     font-family: "Anton", sans-serif;    
     color: white; /* Asegúrate de que el color del texto sea visible sobre el video */
-    text-align: center; /* Centra el texto si es necesario */
-    position: absolute; 
-    top: 50%; /* Ajusta la posición vertical */
-    left: 50%; /* Ajusta la posición horizontal */
-    transform: translate(-50%, -50%); /* Centra el texto */
+    text-align: center;
+    margin-top: 1%;
+    margin-bottom: 1%;
 }
-
-/* FUENTE DE TITULO DE COUNTERSTRIKE */
-.overlay-text1 h1 {
-  font-size: 5rem; /* Ajusta el tamaño de fuente según tus necesidades */
-  font-family: 'Bruno Ace', sans-serif;
-  color: rgb(161, 0, 0); /* Asegúrate de que el color del texto sea visible sobre el video */
-  text-align: center; /* Centra el texto si es necesario */
-  position: absolute; 
-  top: 50%; /* Ajusta la posición vertical */
-  left: 42%; /* Ajusta la posición horizontal */
-  transform: translate(-50%, -50%); /* Centra el texto */
-}
-
-/* ESTO CONTIENE LA IMAGEN DEL TITULO */
-.counter-strike-title {
-  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
-  text-align: center;  /* Centra el texto en la página */
-}
-
+  
 .counter-icon {
   vertical-align: middle;  /* Alinea la imagen con el texto */
   display: inline-block;  /* Hace que la imagen se comporte como un elemento en línea */
 }
+
+/* ESTE ES EL COLOR DEL NUMERO DEL CALL OF DUTY */
 .color6{
     color: #FF5A2C;
 }
 
+/* ESTE ES EL COLOR DEL NUMERO DEL UNCHARTED */
+.color4{
+  color: red;
+}
 .letrapequeña{
     font-size: 0.5em;
     vertical-align: super; 
     color: white;
 }
 .pequeñaletra{
-    font-size: 1.3rem;
+    font-size: 1.5rem;
 }
 
 .contenedor{
@@ -174,7 +205,7 @@ ul {
   
   /* Para resaltar el texto dentro de <strong> en la lista */
   .requisitos strong {
-    color: #a3f892; /* Dorado para los subtítulos (puedes cambiarlo) */
+    color: #a3f892; /* Dorado para los subtítulos */
   }
 
 

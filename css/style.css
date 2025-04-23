@@ -49,6 +49,8 @@ body {
   width: 600%;
   animation: slide 15s  infinite alternate ease-in-out;
 }
+
+/* TAMAÑO DEL CARRUSEL */
 .slider-box li{
   width: 100%;
   list-style: none;
@@ -101,6 +103,8 @@ font-weight: 800;
 text-transform: uppercase;
 }
 
+
+/* PARTE DEL HEADER */
 .menu .navbar ul li {
   position: relative;
   float: left;
@@ -149,7 +153,7 @@ text-transform: uppercase;
   margin-bottom: 45px;
 }
 
-.btn-1, .btn-2, .btn-3 {
+.btn-1 {
   display: inline-block;
   padding: 11px 35px;
   border: 2px solid #FF5A2C;
@@ -193,10 +197,13 @@ h2 {
 .product-1 {
   background-color: #2A223A;
   align-item
+  width: 80%;
 }
 
 .product-txt{
-  padding: 50px 30px;
+  padding: 30px 30px;
+  text-align: center;
+  font-size: 100%;
 }
 
 h3 {
@@ -209,17 +216,6 @@ h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.price p {
-  font-size: 17px;
-  color: #ff3700;
-}
-
-.btn-2 {
-  padding: 5px 25px;
-  background-color: #FF5A2C;
-  margin-right: 0;
 }
 
 .contact {
@@ -271,8 +267,8 @@ input {
 /* Es para los enlaces */
 .link ul {
   display: flex;
-}
-/* Es para darle color a los botones */
+} 
+/* Es para darle color a los botones PARTE DEL FOOTER*/
 .link ul li > a {
   font-size: 17px;
   color: #FFFFFF;
@@ -308,7 +304,10 @@ input {
       border-color: #00ffffaa;
   }
 }
-
+.product-content {
+  margin-left: 10%;
+  margin-right: 10%;
+}
 .product-1:hover{
   border: 2px solid #fff;
   box-shadow: 0 0 15px #00ffffaa; /* Brillo cian */
@@ -319,16 +318,7 @@ input {
   width: 100%;
   display: block;
   border-bottom: 1px solid #333;
-}
-
-.btn-2 {
-  background: #0ff;
-  color: #000;
-  padding: 0.3rem 0.6rem;
-  border-radius: 5px;
-  text-decoration: none;
-  font-size: 0.85rem;
-  transition: background 0.3s ease;
+  
 }
 
 
