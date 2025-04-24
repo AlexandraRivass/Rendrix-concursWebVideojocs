@@ -1,3 +1,4 @@
+
 body {
   font-family: 'Silkscreen';
   background-color: #181726;
@@ -10,6 +11,102 @@ body {
   text-decoration: none;
   list-style: none;
 }
+/* Es para el footer */
+.footer {
+  position: relative; /* Posicionamiento relativo para poder posicionar elementos hijos si es necesario */
+  width: 100%; /* Ocupa todo el ancho disponible */
+  background: #2A223A; /* Color de fondo oscuro */
+  min-height: 100px; /* Altura mínima */
+  padding: 20px 50px; /* Espaciado interno: 20px arriba/abajo, 50px izquierda/derecha */
+  display: flex; /* Usa flexbox para alinear los elementos hijos */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+  flex-direction: column; /* Los elementos hijos se apilan en columna */
+}
+
+/* Contenedor de iconos sociales */
+.social-icon {
+  display: flex; /* Flexbox para alinear iconos */
+  justify-content: center; /* Centra los iconos horizontalmente */
+  align-items: center; /* Centra los iconos verticalmente */
+  position: relative; /* Posicionamiento relativo para hijos */
+  margin: 10px 5px; /* Espaciado exterior */
+  flex-wrap: wrap; /* Permite que los iconos se ajusten en múltiples líneas si es necesario */
+}
+
+/* Elemento de la lista de iconos */
+.icon-elem {
+  list-style: none; /* Elimina los estilos de viñeta de la lista */
+}
+
+/* Estilo de cada icono social */
+.icon {
+  color: white; /* Color blanco */
+  font-size: 32px; /* Tamaño de fuente grande */
+  display: inline-block; /* Se comporta como elemento en línea con propiedades de bloque */
+  margin: 0 10px; /* Espacio horizontal entre iconos */
+  transition: 0.5s; /* Transición suave para efectos */
+}
+
+/* Efecto hover en los iconos sociales */
+.icon:hover {
+  transform: translateY(-10px); /* Mueve el icono hacia arriba al pasar el cursor */
+}
+
+/* Contenedor del menú de navegación */
+.menu {
+  display: flex; /* Flexbox para organizar elementos */
+  justify-content: center; /* Centra horizontalmente */
+  position: relative; /* Posicionamiento relativo */
+  align-items: center; /* Centra verticalmente */
+  margin: 10px 0; /* Margen vertical */
+  flex-wrap: wrap; /* Permite salto de línea si hay muchos elementos */
+}
+
+/* Elemento de la lista del menú */
+.menu-elem {
+  list-style: none; /* Quita los estilos de lista */
+}
+
+/* Enlaces del menú */
+.menu-icon {
+  color: white; /* Texto blanco */
+  font-size: 20px; /* Tamaño de fuente medio */
+  display: inline-block; /* Comportamiento mixto */
+  text-decoration: none; /* Sin subrayado */
+  margin: 5px 10px; /* Espaciado alrededor del enlace */
+  opacity: 0.5; /* Más transparencia por defecto */
+  transition: 0.3s; /* Transición suave */
+}
+ /* ESTO SON LAS ESTRELLAS */
+ /* From Uiverse.io by PriyanshuGupta28 */ 
+.rating {
+  display: inline-block;
+}
+
+.rating input {
+  display: none;
+}
+
+.rating label {
+  float: right;
+  cursor: pointer;
+  color: #ccc;
+  transition: color 0.3s;
+}
+
+.rating label:before {
+  content: '\2605';
+  font-size: 30px;
+}
+
+.rating input:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+  color: #fff700;
+  transition: color 0.3s;
+}
+
 /* TODO ESTO PERTENECE AL HEADER */
 .header{
   background-image: url("../img/StreetFighter.gif");
@@ -320,8 +417,6 @@ input {
   border-bottom: 1px solid #333;
   
 }
-
-
 
 
 /* Media Query */

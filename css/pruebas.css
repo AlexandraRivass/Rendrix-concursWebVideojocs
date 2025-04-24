@@ -1,0 +1,68 @@
+.card {
+    position: relative; /* Permite posicionar elementos hijos con position: absolute */
+    width: 300px; /* Ancho de la tarjeta */
+    height: 200px; /* Alto de la tarjeta */
+    background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100% ); /* Degradado diagonal */
+    border-radius: 10px; /* Bordes redondeados */
+    display: flex; /* Centrado de contenido interno */
+    align-items: center; /* Centrado vertical */
+    justify-content: center; /* Centrado horizontal */
+    overflow: hidden; /* Oculta contenido que se desborda */
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1); /* Transición suave en hover */
+  }
+  
+  .card img {
+    width: 100%; /* Imagen ocupa todo el ancho de la tarjeta */
+    height: 100%; /* Imagen ocupa todo el alto */
+    object-fit: cover; /* La imagen se recorta o ajusta sin distorsionar */
+  }
+  
+  .card svg {
+    width: 48px; /* Tamaño del ícono SVG (si usas uno encima de la imagen) */
+    fill: #333; /* Color del ícono */
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1); /* Transición suave */
+  }
+  
+  .card:hover {
+    transform: rotate(-5deg) scale(1.1); /* Gira un poco y agranda al pasar el mouse */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra elegante */
+  }
+  
+  .card__content {
+    position: absolute; /* Posiciona sobre la imagen */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg); /* Centra y rota para ocultar */
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box; /* Incluye el padding dentro del tamaño */
+    background-color: #2A223A; /* Fondo oscuro para el contenido */
+    opacity: 0; /* Oculto por defecto */
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1); /* Transición suave al mostrar */
+  }
+  
+  .card:hover .card__content {
+    transform: translate(-50%, -50%) rotate(0deg); /* Elimina la rotación */
+    opacity: 1; /* Hace visible el contenido */
+  }
+  
+  .card__title {
+    margin: 0;
+    font-size: 24px; /* Tamaño del título */
+    color: #999999; /* Gris claro */
+    font-weight: 700; /* Negrita */
+  }
+  
+  .card__description {
+    margin: 10px 0 0;
+    font-size: 14px; /* Texto más pequeño */
+    color: #ffffff; /* Blanco */
+    line-height: 1.4; /* Espaciado entre líneas */
+  }
+  
+  .card:hover svg {
+    scale: 0; /* Oculta el ícono al hacer hover */
+    transform: rotate(-45deg); /* Le da un efecto de rotación */
+  }
+  

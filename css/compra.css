@@ -61,7 +61,7 @@ body {
 .type1 {
   position: relative;
   display: inline-block;
-  width: 200px;
+  width: 210px;
   height: 50px;
   text-decoration: none;
   z-index: 1; /* Para asegurarte que esté por encima */
@@ -70,7 +70,7 @@ body {
 .type1::after {
   content: "Volver Inicio";
   height: 50px;
-  width: 200px;
+  width: 210px;
   background-color: #008080;
   color: #fff;
   position: absolute;
@@ -88,7 +88,7 @@ body {
 .type1::before {
   content: "Gracias 😊";
   height: 50px;
-  width: 200px;
+  width: 210px;
   background-color: #fff;
   color: #008080;
   position: absolute;
