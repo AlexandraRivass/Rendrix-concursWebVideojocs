@@ -1,3 +1,4 @@
+
 body {
     font-family: Arial, sans-serif; 
     background-color: #2A223A; /* Color de fondo gris claro */
@@ -110,7 +111,103 @@ body {
 .type1:hover::before {
   transform: translateY(-50px) scale(0) rotate(120deg);
 }
-  
+ 
+/* FOOTER*/
+.footer {
+  position: relative; /* Posicionamiento relativo para poder posicionar elementos hijos si es necesario */
+  width: 100%; /* Ocupa todo el ancho disponible */
+  background: #2A223A; /* Color de fondo oscuro */
+  min-height: 100px; /* Altura mínima */
+  padding: 20px 50px; /* Espaciado interno: 20px arriba/abajo, 50px izquierda/derecha */
+  display: flex; /* Usa flexbox para alinear los elementos hijos */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+  flex-direction: column; /* Los elementos hijos se apilan en columna */
+}
+.text {
+  color: #fff;
+  font-size: 14px;
+  margin-top: 20px; /* Espacio arriba del texto */
+  text-align: center;
+}
+/* ESTO ES PARA QUE ESTE JUNTO LAS LETRAS */
+.menu,
+.rating {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.menu-elem {
+  list-style: none;
+}
+
+.menu-icon {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: 0.3s;
+}
+
+.menu-icon:hover {
+  color: #ffd000;
+}
+
+/* Contenedor de iconos sociales */
+.social-icon {
+  display: flex; /* Flexbox para alinear iconos */
+  justify-content: center; /* Centra los iconos horizontalmente */
+  align-items: center; /* Centra los iconos verticalmente */
+  position: relative; /* Posicionamiento relativo para hijos */
+  margin: 10px 5px; /* Espaciado exterior */
+  flex-wrap: wrap; /* Permite que los iconos se ajusten en múltiples líneas si es necesario */
+}
+
+/* Elemento de la lista de iconos */
+.icon-elem {
+  list-style: none; /* Elimina los estilos de viñeta de la lista */
+  margin-top: 20%;
+}
+
+
+/* Estilo de cada icono social */
+.icon {
+  color: white;
+  font-size: 32px; 
+  display: inline-block; /* Se comporta como elemento en línea con propiedades de bloque */
+  margin: 0 10px; /* Espacio horizontal entre iconos */
+  transition: 0.5s; /* Transición suave para efectos */
+}
+/* ESTO SON LAS ESTRELLAS */
+ .rating {
+  display: inline-block;
+}
+
+.rating input {
+  display: none;
+}
+
+.rating label {
+  float: right;
+  cursor: pointer;
+  color: #ccc;
+  transition: color 0.3s;
+}
+
+.rating label:before {
+  content: '\2605';
+  font-size: 30px;
+}
+
+.rating input:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+  color: #fff700;
+  transition: color 0.3s;
+}
+
   /* ANIMACION DEL CONTENIDO*/
   @keyframes fadeIn {
     from {

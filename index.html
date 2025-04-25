@@ -12,33 +12,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="menu container-fluid">
+        <a href="#" class="logo"><img src="./img/logo.png" width="15%"></a>
+        <input type="checkbox" id="menu">
+        <label for="menu">
+            <img src="./img/menu.png" class="menu-icono" alt="menu">
+        </label>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#todos-los-juegos">Juegos</a></li>
+                <li><a href="#Contactos">Contacto</a></li>
+                <li><a href="#">Sobre Nosotros</a></li>
+            </ul>
+        </nav>
+    </div>
     <header class="header">
-
-        <div class="menu container">
-            <a href="#" class="logo">Logo</a>
-            <input type="checkbox" id="menu">
-            <label for="menu">
-                <img src="./img/menu.png" class="menu-icono" alt="menu">
-            </label>
-            <nav class="navbar">
-                <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Servicios</a></li>
-                    <li><a href="#">Productos</a></li>
-                    <li><a href="#">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
         <div class="header-content container">
             <div class="header-txt">
                 <h1>Compra tu <span>Juego</span><br>favorito aqui</h1>
-                <p>
-                    ESTO ES PRUEBA
+                <p class="color">
+                    Este sitio es un proyecto de la comunidad de Rendrix, donde podrás encontrar juegos de alta calidad y precios asequibles.
                 </p>
-                <div class="butons">
-                    <a href="#" class="btn-1">Información</a>
-                    <a href="#" class="btn-1">Juegos</a>
-                </div>
             </div>
         </div>
     </header>
@@ -84,7 +79,9 @@
 
     <main class="product container">
 
-        <h2>Todos los juegos</h2>
+        <main class="product container" id="todos-los-juegos">
+            <h2 class="centro">Todos los juegos</h2>
+        </main>
 
         <div class="product-content">
 
@@ -158,40 +155,47 @@
         <ul class="social-icon">
           <li class="icon-elem">
             <a href="" class="icon">
-              <ion-icon name="logo-youtube"></ion-icon>
+                <a href="https://www.youtube.com/@Rendrix0706" target="_blank" class="icon">
+                    <ion-icon name="logo-youtube"></ion-icon>
+                </a>
             </a>
           </li>
           <li class="icon-elem">
             <a href="" class="icon">
-              <ion-icon name="logo-instagram"></ion-icon>
+                <a href="https://www.instagram.com/rendrix0706/" target="_blank" class="icon"> <!--target="_blank" y class="icon" ESTO HACE QUE NO APAREZCA COMO UN ENLACE Y QUEDE COMO EL ORIGINAL-->
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
             </a>
           </li>
           <li class="icon-elem">
             <a href="" class="icon">
-              <ion-icon name="logo-whatsapp"></ion-icon>
+                <a href="https://api.whatsapp.com/send?phone=+56929298929" target="_blank" class="icon">
+                    <ion-icon name="logo-whatsapp"></ion-icon>
+                </a>
             </a>
           </li>
           <li class="icon-elem">
             <a href="" class="icon">
-              <ion-icon name="mail-outline"></ion-icon>
+                <a href="mailto:rendrix0706@gmail.com" target="_blank" class="icon">
+                    <ion-icon name="mail-outline"></ion-icon>
+                </a>
             </a>
           </li>
         </ul>
         <ul class="menu">
           <li class="menu-elem">
-            <a href="" class="menu-icon"> Inicio </a>
+            <a href="../index.html" class="menu-icon"> Inicio </a>
           </li>
           <li class="menu-elem">
             <a href="" class="menu-icon"> Juegos </a>
           </li>
           <li class="menu-elem">
-            <a href="" class="menu-icon"> Contacto </a>
+            <a href="#contacto" class="menu-icon"> Contacto </a>
           </li>
           <li class="menu-elem">
             <a href="" class="menu-icon"> Sobre Nosotros </a>
           </li>
         </ul>
-            <!-- From Uiverse.io by PriyanshuGupta28 --> 
         <div class="rating">
             <input value="5" name="rating" id="star5" type="radio">
             <label for="star5"></label>
@@ -206,6 +210,7 @@
         </div>
         <p class="text">Rendrix</p>
       </footer>
+      <!-- ESTO SON LOS ICONOS QUE SE MUESTRA EN LA PAGINA (whatsapp, gmail...) -->
       <script
         type="module"
         src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
